@@ -95,7 +95,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
-            <h3 className="font-poppins font-semibold text-lg mb-6">Quick Links</h3>
+            <h3 className="font-poppins font-semibold text-lg mb-6 text-silver-300">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -112,7 +112,7 @@ const Footer = () => {
 
           {/* Global Offices */}
           <motion.div variants={itemVariants}>
-            <h3 className="font-poppins font-semibold text-lg mb-6">Global Offices</h3>
+            <h3 className="font-poppins font-semibold text-lg mb-6 text-silver-300">Global Offices</h3>
             <div className="space-y-4">
               {offices.map((office) => (
                 <div key={office.country} className="text-sm">
@@ -133,7 +133,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <motion.div variants={itemVariants}>
-            <h3 className="font-poppins font-semibold text-lg mb-6">Get in Touch</h3>
+            <h3 className="font-poppins font-semibold text-lg mb-6 text-silver-300">Get in Touch</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-white mb-2">General Inquiries</h4>
