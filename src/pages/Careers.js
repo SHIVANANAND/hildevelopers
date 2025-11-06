@@ -217,7 +217,7 @@ const Careers = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section ref={heroRef} className="section-padding bg-gradient-to-br from-navy-900 to-blue-900">
+      <section ref={heroRef} className="section-padding bg-emerald-gradient">
         <div className="pt-20 container-custom text-center">
           <motion.div
             initial="hidden"
@@ -233,7 +233,7 @@ const Careers = () => {
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-silver-200 mb-8"
+              className="text-xl md:text-2xl text-emerald-100 mb-8"
             >
               Build your career with Horizon International - where strategic thinking meets enterprise execution, and global collaboration drives innovation.
             </motion.p>
@@ -243,13 +243,13 @@ const Careers = () => {
             >
               <a
                 href="#open-positions"
-                className="btn-primary"
+                className="btn-gold"
               >
                 View Open Positions
               </a>
               <a
                 href="#why-join"
-                className="btn-outline border-white text-white hover:bg-white hover:text-navy-900"
+                className="btn-outline border-emerald-200 text-white hover:bg-white hover:text-emerald-700 hover:border-white"
               >
                 Why Join Us
               </a>
@@ -259,13 +259,13 @@ const Careers = () => {
       </section>
 
       {/* Global Presence Section */}
-      <section className="section-padding bg-silver-50">
+      <section className="section-padding bg-gradient-to-br from-emerald-50 to-emerald-100">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6">
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6">
               Work Across Three Continents
             </h2>
-            <p className="text-xl text-silver-600 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-600 max-w-3xl mx-auto">
               Our global delivery model means you can work with diverse teams, across different time zones, bringing together the best talent from around the world.
             </p>
           </div>
@@ -277,21 +277,21 @@ const Careers = () => {
                 city: 'Mumbai & Bangalore',
                 timezone: 'IST (UTC+5:30)',
                 specialties: ['Development Centers', 'Quality Engineering', 'DevOps'],
-                color: 'from-orange-500 to-orange-600'
+                color: 'from-emerald-500 to-emerald-600'
               },
               {
                 country: 'United Kingdom',
                 city: 'London',
                 timezone: 'GMT (UTC+0)',
                 specialties: ['Client Consulting', 'Business Analysis', 'Project Management'],
-                color: 'from-red-500 to-red-600'
+                color: 'from-forest-600 to-forest-700'
               },
               {
                 country: 'Romania',
                 city: 'Bucharest',
                 timezone: 'EET (UTC+2)',
                 specialties: ['Software Development', 'Data Analytics', 'AI/ML'],
-                color: 'from-blue-500 to-blue-600'
+                color: 'from-emerald-600 to-forest-500'
               }
             ].map((location, index) => (
               <motion.div
@@ -300,22 +300,22 @@ const Careers = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
-                className="bg-white p-8 rounded-xl shadow-lg card-hover"
+                className="bg-white p-8 rounded-xl shadow-lg card-hover border border-emerald-100"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${location.color} rounded-lg flex items-center justify-center mb-6`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${location.color} rounded-lg flex items-center justify-center mb-6 shadow-gold`}>
                   <GlobeAltIcon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-poppins font-bold text-navy-800 mb-2">
+                <h3 className="text-2xl font-poppins font-bold text-emerald-700 mb-2">
                   {location.country}
                 </h3>
-                <div className="text-silver-600 mb-4">
+                <div className="text-emerald-600 mb-4">
                   <div className="font-medium">{location.city}</div>
                   <div className="text-sm">{location.timezone}</div>
                 </div>
                 <div className="space-y-2">
                   {location.specialties.map((specialty, specIndex) => (
-                    <div key={specIndex} className="flex items-center text-sm text-silver-600">
-                      <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2" />
+                    <div key={specIndex} className="flex items-center text-sm text-emerald-600">
+                      <CheckCircleIcon className="h-4 w-4 text-emerald-500 mr-2" />
                       {specialty}
                     </div>
                   ))}
@@ -337,13 +337,13 @@ const Careers = () => {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6"
+              className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6"
             >
               Why Choose Horizon International?
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-silver-600 max-w-3xl mx-auto"
+              className="text-xl text-emerald-600 max-w-3xl mx-auto"
             >
               Join a company where your professional growth is supported, your ideas are valued, and your work makes a real impact on enterprise transformation.
             </motion.p>
@@ -356,7 +356,7 @@ const Careers = () => {
             variants={staggerContainer}
             className="mb-20"
           >
-            <h3 className="text-2xl font-poppins font-bold text-navy-800 text-center mb-12">Our Values</h3>
+            <h3 className="text-2xl font-poppins font-bold text-emerald-700 text-center mb-12">Our Values</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <motion.div
@@ -364,13 +364,13 @@ const Careers = () => {
                   variants={fadeInUp}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-gold">
                     <value.icon className="h-8 w-8 text-white" />
                   </div>
-                  <h4 className="text-xl font-poppins font-semibold text-navy-800 mb-3">
+                  <h4 className="text-xl font-poppins font-semibold text-emerald-700 mb-3">
                     {value.title}
                   </h4>
-                  <p className="text-silver-600">
+                  <p className="text-emerald-600">
                     {value.description}
                   </p>
                 </motion.div>
@@ -384,19 +384,19 @@ const Careers = () => {
             animate={cultureInView ? "visible" : "hidden"}
             variants={staggerContainer}
           >
-            <h3 className="text-2xl font-poppins font-bold text-navy-800 text-center mb-12">Employee Benefits</h3>
+            <h3 className="text-2xl font-poppins font-bold text-emerald-700 text-center mb-12">Employee Benefits</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
                   variants={fadeInUp}
-                  className="bg-silver-50 p-6 rounded-lg hover:bg-silver-100 transition-colors duration-200"
+                  className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-6 rounded-lg hover:from-emerald-100 hover:to-emerald-200 transition-colors duration-200"
                 >
-                  <benefit.icon className="h-10 w-10 text-blue-600 mb-4" />
-                  <h4 className="text-lg font-poppins font-semibold text-navy-800 mb-3">
+                  <benefit.icon className="h-10 w-10 text-emerald-600 mb-4" />
+                  <h4 className="text-lg font-poppins font-semibold text-emerald-700 mb-3">
                     {benefit.title}
                   </h4>
-                  <p className="text-silver-600">
+                  <p className="text-emerald-600">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -407,7 +407,7 @@ const Careers = () => {
       </section>
 
       {/* Open Positions Section */}
-      <section id="open-positions" ref={rolesRef} className="section-padding bg-silver-50">
+      <section id="open-positions" ref={rolesRef} className="section-padding bg-gradient-to-br from-emerald-50 to-emerald-100">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -417,13 +417,13 @@ const Careers = () => {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6"
+              className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6"
             >
               Current Openings
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-silver-600 max-w-3xl mx-auto"
+              className="text-xl text-emerald-600 max-w-3xl mx-auto"
             >
               Explore opportunities across our global offices and remote positions. Find your perfect role in our growing team.
             </motion.p>
@@ -442,8 +442,8 @@ const Careers = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors duration-200 ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-silver-600 hover:bg-silver-100'
+                    ? 'bg-emerald-600 text-white'
+                    : 'bg-white text-emerald-600 hover:bg-emerald-100 border border-emerald-200'
                 }`}
               >
                 {category.name}
@@ -462,22 +462,22 @@ const Careers = () => {
               <motion.div
                 key={position.id}
                 variants={fadeInUp}
-                className="bg-white p-8 rounded-xl shadow-lg card-hover"
+                className="bg-white p-8 rounded-xl shadow-lg card-hover border border-emerald-100"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-poppins font-bold text-navy-800 mb-2">
+                    <h3 className="text-xl font-poppins font-bold text-emerald-700 mb-2">
                       {position.title}
                     </h3>
-                    <div className="text-silver-600">
+                    <div className="text-emerald-600">
                       <div className="font-medium">{position.department}</div>
                       <div className="text-sm">{position.location}</div>
                     </div>
                   </div>
-                  <BriefcaseIcon className="h-8 w-8 text-blue-600" />
+                  <BriefcaseIcon className="h-8 w-8 text-emerald-600" />
                 </div>
 
-                <div className="flex flex-wrap gap-4 text-sm text-silver-500 mb-6">
+                <div className="flex flex-wrap gap-4 text-sm text-emerald-500 mb-6">
                   <div className="flex items-center">
                     <ClockIcon className="h-4 w-4 mr-1" />
                     {position.type}
@@ -488,23 +488,23 @@ const Careers = () => {
                   </div>
                 </div>
 
-                <p className="text-silver-600 mb-6 leading-relaxed">
+                <p className="text-emerald-600 mb-6 leading-relaxed">
                   {position.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-medium text-navy-800 mb-3">Key Requirements</h4>
+                  <h4 className="font-medium text-emerald-700 mb-3">Key Requirements</h4>
                   <ul className="space-y-2">
                     {position.requirements.map((req, reqIndex) => (
-                      <li key={reqIndex} className="flex items-start text-sm text-silver-600">
-                        <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <li key={reqIndex} className="flex items-start text-sm text-emerald-600">
+                        <CheckCircleIcon className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
                         {req}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <button className="btn-primary w-full group">
+                <button className="btn-gold w-full group">
                   Apply Now
                   <ArrowRightIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -518,10 +518,10 @@ const Careers = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6">
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6">
               Our Hiring Process
             </h2>
-            <p className="text-xl text-silver-600 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-600 max-w-3xl mx-auto">
               We believe in a transparent, thorough process that allows us to get to know you and ensures the role is the right fit for both parties.
             </p>
           </div>
@@ -537,14 +537,14 @@ const Careers = () => {
                   variants={fadeInUp}
                   className="flex items-start"
                 >
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-6 flex-shrink-0">
+                  <div className="w-12 h-12 bg-emerald-gradient text-white rounded-full flex items-center justify-center font-bold text-lg mr-6 flex-shrink-0 shadow-gold">
                     {step.step}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-poppins font-semibold text-navy-800 mb-2">
+                    <h3 className="text-xl font-poppins font-semibold text-emerald-700 mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-silver-600">
+                    <p className="text-emerald-600">
                       {step.description}
                     </p>
                   </div>
@@ -556,7 +556,7 @@ const Careers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-navy-900">
+      <section className="section-padding bg-emerald-gradient">
         <div className="container-custom text-center">
           <motion.div
             initial="hidden"
@@ -568,19 +568,19 @@ const Careers = () => {
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
               Ready to Start Your Journey with Us?
             </h2>
-            <p className="text-xl text-silver-200 mb-8">
+            <p className="text-xl text-emerald-100 mb-8">
               Join Horizon International and be part of a global team that's transforming enterprises through strategic technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:careers@horizon-international.com"
-                className="btn-primary"
+                className="btn-gold"
               >
                 Send Your Resume
               </a>
               <a
                 href="/contact"
-                className="btn-outline border-white text-white hover:bg-white hover:text-navy-900"
+                className="btn-outline border-emerald-200 text-white hover:bg-white hover:text-emerald-700 hover:border-white"
               >
                 Contact HR
               </a>

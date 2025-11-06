@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  PhoneIcon,
-  EnvelopeIcon,
-  GlobeAltIcon
+import { 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  GlobeAltIcon 
 } from '@heroicons/react/24/outline';
 import logo from '../../assets/HIIL LOGO.png';
 
@@ -40,9 +40,10 @@ const Footer = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Global Presence', href: '/global-presence' },
+    { name: 'Services', href: '/services' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Insights', href: '/insights' },
+    { name: 'About', href: '/about' },
   ];
 
   const containerVariants = {
@@ -61,7 +62,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-navy-900 text-white">
+    <footer className="bg-emerald-gradient text-white">
       <div className="container-custom section-padding">
         <motion.div
           variants={containerVariants}
@@ -73,20 +74,17 @@ const Footer = () => {
           {/* Company Info */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              {/* <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">H</span>
-              </div> */}
               <img src={logo} alt="Logo" className="w-auto h-12" />
               <div className="flex flex-col">
-                <span className="font-poppins font-bold text-xl">Horizon International</span>
-                <span className="text-sm text-silver-300">Strategic Technology Solutions</span>
+                <span className="font-bold text-xl">Horizon International</span>
+                <span className="text-sm text-emerald-100">Strategic Technology Solutions</span>
               </div>
             </div>
-            <p className="text-silver-300 mb-6 leading-relaxed">
+            <p className="text-emerald-100 mb-6 leading-relaxed">
               Helping mid-market enterprises solve complex modernization, automation, and integration challenges with enterprise-grade execution.
             </p>
             <div className="flex space-x-4">
-              <div className="flex items-center text-sm text-silver-300">
+              <div className="flex items-center text-sm text-emerald-100">
                 <GlobeAltIcon className="h-4 w-4 mr-2" />
                 <span>CMMI Level 3 Certified</span>
               </div>
@@ -95,13 +93,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
-            <h3 className="font-poppins font-semibold text-lg mb-6 text-silver-300">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-silver-300 hover:text-white transition-colors duration-200"
+                    className="text-emerald-100 hover:text-gold-200 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -112,17 +110,17 @@ const Footer = () => {
 
           {/* Global Offices */}
           <motion.div variants={itemVariants}>
-            <h3 className="font-poppins font-semibold text-lg mb-6 text-silver-300">Global Offices</h3>
+            <h3 className="font-bold text-lg mb-6">Global Offices</h3>
             <div className="space-y-4">
               {offices.map((office) => (
                 <div key={office.country} className="text-sm">
                   <div className="font-medium text-white mb-1">
                     {office.city}, {office.country}
                   </div>
-                  <div className="text-silver-300 text-xs leading-relaxed">
+                  <div className="text-emerald-200 text-xs leading-relaxed">
                     {office.address}
                   </div>
-                  <div className="text-silver-400 text-xs mt-1 flex items-center">
+                  <div className="text-gold-200 text-xs mt-1 flex items-center">
                     <PhoneIcon className="h-3 w-3 mr-1" />
                     {office.phone}
                   </div>
@@ -133,25 +131,25 @@ const Footer = () => {
 
           {/* Contact Info */}
           <motion.div variants={itemVariants}>
-            <h3 className="font-poppins font-semibold text-lg mb-6 text-silver-300">Get in Touch</h3>
+            <h3 className="font-bold text-lg mb-6">Get in Touch</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-white mb-2">General Inquiries</h4>
-                <div className="text-silver-300 text-sm flex items-center">
+                <div className="text-emerald-100 text-sm flex items-center">
                   <EnvelopeIcon className="h-4 w-4 mr-2" />
                   info@horizon-international.com
                 </div>
               </div>
               <div>
                 <h4 className="font-medium text-white mb-2">Partnership Opportunities</h4>
-                <div className="text-silver-300 text-sm flex items-center">
+                <div className="text-emerald-100 text-sm flex items-center">
                   <EnvelopeIcon className="h-4 w-4 mr-2" />
                   partnerships@horizon-international.com
                 </div>
               </div>
               <div>
                 <h4 className="font-medium text-white mb-2">Careers</h4>
-                <div className="text-silver-300 text-sm flex items-center">
+                <div className="text-emerald-100 text-sm flex items-center">
                   <EnvelopeIcon className="h-4 w-4 mr-2" />
                   careers@horizon-international.com
                 </div>
@@ -161,7 +159,7 @@ const Footer = () => {
             <div className="mt-6">
               <Link
                 to="/contact"
-                className="btn-primary text-sm px-6 py-2"
+                className="btn-gold text-sm px-6 py-2"
               >
                 Contact Us
               </Link>
@@ -172,10 +170,10 @@ const Footer = () => {
         {/* Bottom Section */}
         <motion.div
           variants={itemVariants}
-          className="border-t border-silver-700 mt-12 pt-8"
+          className="border-t border-emerald-400 mt-12 pt-8"
         >
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <div className="text-silver-300 text-sm">
+            <div className="text-emerald-100 text-sm">
               © {currentYear} Horizon Industries International Limited. All rights reserved.
             </div>
             <div className="flex flex-wrap gap-6 text-sm">
@@ -183,7 +181,7 @@ const Footer = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-silver-300 hover:text-white transition-colors duration-200"
+                  className="text-emerald-100 hover:text-gold-200 transition-colors duration-200"
                 >
                   {link.name}
                 </Link>

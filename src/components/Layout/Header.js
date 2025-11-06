@@ -20,9 +20,10 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Global Presence', href: '/global-presence' },
+    { name: 'Services', href: '/services' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Insights', href: '/insights' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -35,7 +36,7 @@ const Header = () => {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-custom shadow-lg' 
+          ? 'bg-white/95 backdrop-blur-custom shadow-lg border-b border-emerald-100' 
           : 'bg-transparent'
       }`}
     >
@@ -43,18 +44,15 @@ const Header = () => {
         <div className="flex justify-between items-center py-4 lg:py-6">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            {/* <div className="w-10 h-10 bg-gradient-to-r from-gray-800 to-blue-600 rounded-lg flex items-center justify-center"> */}
-              {/* <span className="text-white font-bold text-xl">H</span> */}
-              <img src={logo} alt="Logo" className="w-auto h-12" />
-            {/* </div> */}
+            <img src={logo} alt="Logo" className="w-auto h-12" />
             <div className="flex flex-col">
               <span className={`font-bold text-xl ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                isScrolled ? 'text-emerald-900' : 'text-white'
               }`}>
                 Horizon International
               </span>
               <span className={`text-xs ${
-                isScrolled ? 'text-gray-600' : 'text-white/80'
+                isScrolled ? 'text-emerald-600' : 'text-emerald-100'
               }`}>
                 Strategic Technology Solutions
               </span>
@@ -69,10 +67,10 @@ const Header = () => {
                 to={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-blue-600 border-b-2 border-blue-600'
+                    ? 'text-emerald-600 border-b-2 border-emerald-600'
                     : isScrolled
-                    ? 'text-gray-700 hover:text-blue-600'
-                    : 'text-white hover:text-blue-200'
+                    ? 'text-emerald-800 hover:text-emerald-600'
+                    : 'text-white hover:text-emerald-200'
                 }`}
               >
                 {item.name}
@@ -85,10 +83,10 @@ const Header = () => {
             <Link
               to="/contact"
               className={`btn-primary ${
-                isScrolled ? '' : 'bg-white text-gray-700 hover:bg-gray-50'
+                isScrolled ? '' : 'bg-gold-600 text-white hover:bg-gold-700 shadow-lg'
               }`}
             >
-              Get Started
+              Get in Touch
             </Link>
           </div>
 
@@ -97,7 +95,7 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2 rounded-md ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+                isScrolled ? 'text-emerald-800' : 'text-white'
               }`}
             >
               {isMenuOpen ? (
@@ -115,7 +113,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-gray-200"
+            className="lg:hidden border-t border-emerald-200 bg-white"
           >
             <div className="py-4 space-y-2">
               {navigation.map((item) => (
@@ -124,10 +122,10 @@ const Header = () => {
                   to={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
-                  isActive(item.href)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
+                    isActive(item.href)
+                      ? 'text-emerald-600 bg-emerald-50'
+                      : 'text-emerald-800 hover:text-emerald-600 hover:bg-emerald-50'
+                  }`}
                 >
                   {item.name}
                 </Link>

@@ -44,7 +44,7 @@ const CaseStudies = () => {
         { metric: 'Customer Satisfaction', value: '+40%' }
       ],
       icon: ChartBarIcon,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-emerald-500 to-emerald-600',
       timeline: '18 months',
       team: '12 specialists across 3 locations'
     },
@@ -63,7 +63,7 @@ const CaseStudies = () => {
         { metric: 'Regulatory Efficiency', value: '90% faster' }
       ],
       icon: CurrencyDollarIcon,
-      color: 'from-green-500 to-green-600',
+      color: 'from-forest-600 to-forest-700',
       timeline: '12 months',
       team: '8 specialists across 2 locations'
     },
@@ -82,7 +82,7 @@ const CaseStudies = () => {
         { metric: 'Operational Costs', value: '-45%' }
       ],
       icon: ClockIcon,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-emerald-400 to-emerald-500',
       timeline: '24 months',
       team: '15 specialists across 3 locations'
     },
@@ -101,7 +101,7 @@ const CaseStudies = () => {
         { metric: 'Risk Detection', value: '5x better' }
       ],
       icon: ShieldCheckIcon,
-      color: 'from-red-500 to-red-600',
+      color: 'from-emerald-600 to-forest-500',
       timeline: '15 months',
       team: '10 specialists across 2 locations'
     }
@@ -117,7 +117,7 @@ const CaseStudies = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section ref={heroRef} className="section-padding bg-gradient-to-br from-navy-900 to-blue-900">
+      <section ref={heroRef} className="section-padding bg-emerald-gradient">
         <div className="pt-20 container-custom text-center">
           <motion.div
             initial="hidden"
@@ -133,7 +133,7 @@ const CaseStudies = () => {
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-silver-200 mb-8"
+              className="text-xl md:text-2xl text-emerald-100 mb-8"
             >
               Real-world examples of how we've helped mid-market enterprises solve complex technology challenges and achieve measurable business outcomes.
             </motion.p>
@@ -142,7 +142,7 @@ const CaseStudies = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-silver-50">
+      <section className="section-padding bg-gradient-to-br from-emerald-50 to-emerald-100">
         <div className="container-custom">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -154,10 +154,10 @@ const CaseStudies = () => {
                 variants={fadeInUp}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-2">
+                <div className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-silver-600">
+                <div className="text-emerald-600 font-medium">
                   {stat.label}
                 </div>
               </motion.div>
@@ -179,50 +179,50 @@ const CaseStudies = () => {
               <motion.div
                 key={caseStudy.id}
                 variants={fadeInUp}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover"
+                className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover border border-emerald-100"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {/* Content */}
                   <div className="p-8 lg:p-12">
                     <div className="flex items-center mb-6">
-                      <div className={`w-12 h-12 bg-gradient-to-r ${caseStudy.color} rounded-lg flex items-center justify-center mr-4`}>
+                      <div className={`w-12 h-12 bg-gradient-to-r ${caseStudy.color} rounded-lg flex items-center justify-center mr-4 shadow-gold`}>
                         <caseStudy.icon className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-sm text-silver-500 uppercase tracking-wide">
+                        <div className="text-sm text-emerald-600 uppercase tracking-wide font-medium">
                           {caseStudy.industry}
                         </div>
-                        <h3 className="text-2xl font-poppins font-bold text-navy-800">
+                        <h3 className="text-2xl font-poppins font-bold text-emerald-700">
                           {caseStudy.title}
                         </h3>
                       </div>
                     </div>
 
-                    <div className="text-silver-600 text-sm mb-4">
+                    <div className="text-emerald-600 text-sm mb-4">
                       <span className="font-medium">Client:</span> {caseStudy.client}
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="font-poppins font-semibold text-navy-800 mb-2">Challenge</h4>
-                      <p className="text-silver-600 leading-relaxed">
+                      <h4 className="font-poppins font-semibold text-emerald-700 mb-2">Challenge</h4>
+                      <p className="text-emerald-600 leading-relaxed">
                         {caseStudy.challenge}
                       </p>
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="font-poppins font-semibold text-navy-800 mb-2">Solution</h4>
-                      <p className="text-silver-600 leading-relaxed">
+                      <h4 className="font-poppins font-semibold text-emerald-700 mb-2">Solution</h4>
+                      <p className="text-emerald-600 leading-relaxed">
                         {caseStudy.solution}
                       </p>
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="font-poppins font-semibold text-navy-800 mb-3">Technologies Used</h4>
+                      <h4 className="font-poppins font-semibold text-emerald-700 mb-3">Technologies Used</h4>
                       <div className="flex flex-wrap gap-2">
                         {caseStudy.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-3 py-1 bg-silver-100 text-silver-700 text-sm rounded-full"
+                            className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm rounded-full font-medium"
                           >
                             {tech}
                           </span>
@@ -232,35 +232,35 @@ const CaseStudies = () => {
 
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
-                        <span className="text-silver-500">Timeline:</span>
-                        <div className="font-medium text-navy-800">{caseStudy.timeline}</div>
+                        <span className="text-emerald-500">Timeline:</span>
+                        <div className="font-medium text-emerald-700">{caseStudy.timeline}</div>
                       </div>
                       <div>
-                        <span className="text-silver-500">Team:</span>
-                        <div className="font-medium text-navy-800">{caseStudy.team}</div>
+                        <span className="text-emerald-500">Team:</span>
+                        <div className="font-medium text-emerald-700">{caseStudy.team}</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Results */}
-                  <div className="bg-silver-50 p-8 lg:p-12">
-                    <h4 className="font-poppins font-semibold text-navy-800 mb-6 text-lg">
+                  <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 lg:p-12">
+                    <h4 className="font-poppins font-semibold text-emerald-700 mb-6 text-lg">
                       Key Results & Impact
                     </h4>
                     <div className="space-y-4 mb-8">
                       {caseStudy.results.map((result, resultIndex) => (
                         <div key={resultIndex} className="flex items-center justify-between">
-                          <span className="text-silver-600">{result.metric}</span>
-                          <div className="text-xl font-bold text-blue-600">
+                          <span className="text-emerald-600 font-medium">{result.metric}</span>
+                          <div className="text-xl font-bold text-gold-600">
                             {result.value}
                           </div>
                         </div>
                       ))}
                     </div>
 
-                    <div className="bg-white p-6 rounded-lg border-l-4 border-blue-600">
-                      <div className="text-sm text-silver-500 mb-1">Strategic Impact</div>
-                      <div className="text-navy-800 font-medium">
+                    <div className="bg-white p-6 rounded-lg border-l-4 border-gold-500 shadow-soft">
+                      <div className="text-sm text-emerald-500 mb-1">Strategic Impact</div>
+                      <div className="text-emerald-700 font-medium">
                         {caseStudy.id === 1 && "Transformed fragmented banking operations into a unified, compliant, and efficient ecosystem serving 2M+ customers."}
                         {caseStudy.id === 2 && "Modernized portfolio management enabling faster, data-driven investment decisions and improved risk management."}
                         {caseStudy.id === 3 && "Revolutionized pension administration, improving member experience and operational resilience for a national institution."}
@@ -276,7 +276,7 @@ const CaseStudies = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-navy-900">
+      <section className="section-padding bg-emerald-gradient">
         <div className="container-custom text-center">
           <motion.div
             initial="hidden"
@@ -288,20 +288,20 @@ const CaseStudies = () => {
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
               Ready to Create Your Success Story?
             </h2>
-            <p className="text-xl text-silver-200 mb-8">
+            <p className="text-xl text-emerald-100 mb-8">
               Let's discuss how our proven methodology and enterprise-grade solutions can address your specific challenges and deliver measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="btn-primary group"
+                className="btn-gold group"
               >
                 Start Your Project
                 <ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="/global-presence"
-                className="btn-outline border-white text-white hover:bg-white hover:text-navy-900"
+                className="btn-outline border-emerald-200 text-white hover:bg-white hover:text-emerald-700 hover:border-white"
               >
                 Our Global Reach
               </a>

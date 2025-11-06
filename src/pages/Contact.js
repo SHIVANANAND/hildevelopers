@@ -50,7 +50,7 @@ const Contact = () => {
       description: 'Get in touch via email for detailed discussions',
       contact: 'info@horizon-international.com',
       action: 'mailto:info@horizon-international.com',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-emerald-500 to-emerald-600'
     },
     {
       icon: PhoneIcon,
@@ -58,7 +58,7 @@ const Contact = () => {
       description: 'Speak directly with our consultants',
       contact: '+1 (555) 123-4567',
       action: 'tel:+15551234567',
-      color: 'from-green-500 to-green-600'
+      color: 'from-forest-600 to-forest-700'
     },
     {
       icon: ChatBubbleLeftRightIcon,
@@ -66,7 +66,7 @@ const Contact = () => {
       description: 'Chat with our team for quick questions',
       contact: 'Available 24/7',
       action: '#chat',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-emerald-600 to-forest-500'
     }
   ];
 
@@ -78,7 +78,7 @@ const Contact = () => {
       phone: '+91 22 6789 0123',
       email: 'india@horizon-international.com',
       timezone: 'Mon-Fri, 9:00 AM - 6:00 PM IST',
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-emerald-500 to-emerald-600'
     },
     {
       country: 'United Kingdom',
@@ -87,7 +87,7 @@ const Contact = () => {
       phone: '+44 20 1234 5678',
       email: 'uk@horizon-international.com',
       timezone: 'Mon-Fri, 9:00 AM - 5:30 PM GMT',
-      color: 'from-red-500 to-red-600'
+      color: 'from-forest-600 to-forest-700'
     },
     {
       country: 'Romania',
@@ -96,7 +96,7 @@ const Contact = () => {
       phone: '+40 21 123 4567',
       email: 'romania@horizon-international.com',
       timezone: 'Mon-Fri, 9:00 AM - 6:00 PM EET',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-emerald-600 to-forest-500'
     }
   ];
 
@@ -179,7 +179,7 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section ref={heroRef} className="section-padding bg-gradient-to-br from-navy-900 to-blue-900">
+      <section ref={heroRef} className="section-padding bg-emerald-gradient">
         <div className="pt-20 container-custom text-center">
           <motion.div
             initial="hidden"
@@ -195,7 +195,7 @@ const Contact = () => {
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-silver-200 mb-8"
+              className="text-xl md:text-2xl text-emerald-100 mb-8"
             >
               Ready to solve your complex technology challenges? Connect with our global team of experts for a strategic consultation tailored to your enterprise needs.
             </motion.p>
@@ -204,13 +204,13 @@ const Contact = () => {
       </section>
 
       {/* Contact Methods */}
-      <section className="section-padding bg-silver-50">
+      <section className="section-padding bg-gradient-to-br from-emerald-50 to-emerald-100">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6">
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6">
               How Can We Help You?
             </h2>
-            <p className="text-xl text-silver-600 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-600 max-w-3xl mx-auto">
               Choose the communication method that works best for you. Our team is ready to discuss your strategic technology requirements.
             </p>
           </div>
@@ -224,18 +224,18 @@ const Contact = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center card-hover group"
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center card-hover group border border-emerald-100"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-6 shadow-gold`}>
                   <method.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-poppins font-bold text-navy-800 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-poppins font-bold text-emerald-700 mb-3 group-hover:text-emerald-600 transition-colors">
                   {method.title}
                 </h3>
-                <p className="text-silver-600 mb-4">
+                <p className="text-emerald-600 mb-4">
                   {method.description}
                 </p>
-                <div className="text-navy-800 font-medium">
+                <div className="text-emerald-700 font-medium">
                   {method.contact}
                 </div>
               </motion.a>
@@ -256,13 +256,13 @@ const Contact = () => {
             >
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6"
+                className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6"
               >
                 Project Inquiry Form
               </motion.h2>
               <motion.p
                 variants={fadeInUp}
-                className="text-xl text-silver-600"
+                className="text-xl text-emerald-600"
               >
                 Tell us about your project requirements, and we'll connect you with the right expert within 24 hours.
               </motion.p>
@@ -271,11 +271,11 @@ const Contact = () => {
             <motion.form
               variants={fadeInUp}
               onSubmit={handleSubmit}
-              className="bg-silver-50 rounded-2xl p-8 lg:p-12"
+              className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 lg:p-12 border border-emerald-200"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-emerald-700 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -285,13 +285,13 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-emerald-700 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -301,13 +301,13 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="your.email@company.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-emerald-700 mb-2">
                     Company Name *
                   </label>
                   <input
@@ -317,13 +317,13 @@ const Contact = () => {
                     required
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-emerald-700 mb-2">
                     Phone Number
                   </label>
                   <input
@@ -332,13 +332,13 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="service" className="block text-sm font-medium text-emerald-700 mb-2">
                     Service of Interest *
                   </label>
                   <select
@@ -347,7 +347,7 @@ const Contact = () => {
                     required
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
@@ -359,7 +359,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="budget" className="block text-sm font-medium text-emerald-700 mb-2">
                     Project Budget
                   </label>
                   <select
@@ -367,7 +367,7 @@ const Contact = () => {
                     name="budget"
                     value={formData.budget}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   >
                     <option value="">Select budget range</option>
                     {budgetRanges.map((range) => (
@@ -379,7 +379,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="timeline" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="timeline" className="block text-sm font-medium text-emerald-700 mb-2">
                     Project Timeline
                   </label>
                   <select
@@ -387,7 +387,7 @@ const Contact = () => {
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   >
                     <option value="">Select timeline</option>
                     {timelines.map((time) => (
@@ -399,7 +399,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="preferredContact" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="preferredContact" className="block text-sm font-medium text-emerald-700 mb-2">
                     Preferred Contact Method
                   </label>
                   <select
@@ -407,7 +407,7 @@ const Contact = () => {
                     name="preferredContact"
                     value={formData.preferredContact}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   >
                     <option value="email">Email</option>
                     <option value="phone">Phone</option>
@@ -416,7 +416,7 @@ const Contact = () => {
                 </div>
 
                 <div className="md:col-span-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-navy-800 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-emerald-700 mb-2">
                     Project Description *
                   </label>
                   <textarea
@@ -426,7 +426,7 @@ const Contact = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-silver-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-emerald-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     placeholder="Please describe your project requirements, current challenges, expected outcomes, and any specific technologies or methodologies you'd like us to consider..."
                   />
                 </div>
@@ -435,12 +435,12 @@ const Contact = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="btn-primary group"
+                  className="btn-gold group"
                 >
                   Submit Inquiry
                   <ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <p className="text-sm text-silver-500 mt-4">
+                <p className="text-sm text-emerald-500 mt-4">
                   We respect your privacy and will only use your information to contact you about your inquiry.
                 </p>
               </div>
@@ -450,7 +450,7 @@ const Contact = () => {
       </section>
 
       {/* Global Office Information */}
-      <section ref={infoRef} className="section-padding bg-silver-50">
+      <section ref={infoRef} className="section-padding bg-gradient-to-br from-emerald-50 to-emerald-100">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -460,13 +460,13 @@ const Contact = () => {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6"
+              className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6"
             >
               Global Office Locations
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-silver-600 max-w-3xl mx-auto"
+              className="text-xl text-emerald-600 max-w-3xl mx-auto"
             >
               Connect with our offices worldwide for local expertise with global standards.
             </motion.p>
@@ -480,38 +480,38 @@ const Contact = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
-                className="bg-white p-8 rounded-xl shadow-lg card-hover"
+                className="bg-white p-8 rounded-xl shadow-lg card-hover border border-emerald-100"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${office.color} rounded-lg flex items-center justify-center mb-6`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${office.color} rounded-lg flex items-center justify-center mb-6 shadow-gold`}>
                   <BuildingOfficeIcon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-poppins font-bold text-navy-800 mb-2">
+                <h3 className="text-2xl font-poppins font-bold text-emerald-700 mb-2">
                   {office.country}
                 </h3>
-                <div className="text-silver-600 mb-4 font-medium">
+                <div className="text-emerald-600 mb-4 font-medium">
                   {office.city}
                 </div>
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start">
-                    <MapPinIcon className="h-5 w-5 text-silver-500 mr-3 mt-0.5" />
-                    <span className="text-silver-600 text-sm">{office.address}</span>
+                    <MapPinIcon className="h-5 w-5 text-emerald-500 mr-3 mt-0.5" />
+                    <span className="text-emerald-600 text-sm">{office.address}</span>
                   </div>
                   <div className="flex items-center">
-                    <PhoneIcon className="h-5 w-5 text-silver-500 mr-3" />
-                    <a href={`tel:${office.phone}`} className="text-silver-600 hover:text-blue-600">
+                    <PhoneIcon className="h-5 w-5 text-emerald-500 mr-3" />
+                    <a href={`tel:${office.phone}`} className="text-emerald-600 hover:text-emerald-700">
                       {office.phone}
                     </a>
                   </div>
                   <div className="flex items-center">
-                    <EnvelopeIcon className="h-5 w-5 text-silver-500 mr-3" />
-                    <a href={`mailto:${office.email}`} className="text-silver-600 hover:text-blue-600">
+                    <EnvelopeIcon className="h-5 w-5 text-emerald-500 mr-3" />
+                    <a href={`mailto:${office.email}`} className="text-emerald-600 hover:text-emerald-700">
                       {office.email}
                     </a>
                   </div>
                   <div className="flex items-center">
-                    <ClockIcon className="h-5 w-5 text-silver-500 mr-3" />
-                    <span className="text-silver-600 text-sm">{office.timezone}</span>
+                    <ClockIcon className="h-5 w-5 text-emerald-500 mr-3" />
+                    <span className="text-emerald-600 text-sm">{office.timezone}</span>
                   </div>
                 </div>
               </motion.div>
@@ -525,10 +525,10 @@ const Contact = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-navy-800 mb-6">
+              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-emerald-700 mb-6">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-silver-600">
+              <p className="text-xl text-emerald-600">
                 Quick answers to common questions about working with Horizon International.
               </p>
             </div>
@@ -541,12 +541,12 @@ const Contact = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeInUp}
-                  className="bg-silver-50 p-8 rounded-xl"
+                  className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-xl border border-emerald-200"
                 >
-                  <h3 className="text-xl font-poppins font-semibold text-navy-800 mb-4">
+                  <h3 className="text-xl font-poppins font-semibold text-emerald-700 mb-4">
                     {faq.question}
                   </h3>
-                  <p className="text-silver-600 leading-relaxed">
+                  <p className="text-emerald-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </motion.div>
@@ -557,7 +557,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-navy-900">
+      <section className="section-padding bg-emerald-gradient mb-16">
         <div className="container-custom text-center">
           <motion.div
             initial="hidden"
@@ -569,19 +569,19 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-6">
               Ready to Begin Your Digital Transformation?
             </h2>
-            <p className="text-xl text-silver-200 mb-8">
+            <p className="text-xl text-emerald-100 mb-8">
               Our team of experts is standing by to help you navigate complex technology challenges and drive measurable business outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:info@horizon-international.com"
-                className="btn-primary"
+                className="btn-gold"
               >
                 Start Your Project
               </a>
               <a
                 href="/global-presence"
-                className="btn-outline border-white text-white hover:bg-white hover:text-navy-900"
+                className="btn-outline border-emerald-200 text-white hover:bg-white hover:text-emerald-700 hover:border-white"
               >
                 View Global Offices
               </a>
