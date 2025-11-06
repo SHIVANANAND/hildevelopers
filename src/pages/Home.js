@@ -102,39 +102,38 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center bg-emerald-gradient">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-400/20 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="relative z-10 container-custom text-center">
-          <motion.div
-            initial="hidden"
-            animate={heroInView ? "visible" : "hidden"}
-            variants={staggerContainer}
-            className="max-w-5xl mx-auto"
-          >
-            <motion.h1
-              variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-            >
-              <span className="text-gradient-golden">
-                AI-Led Enterprise Process Orchestration
-              </span>{' '}
-              & Knowledge Work Automation
-            </motion.h1>
-            
-            <motion.p
-              variants={fadeInUp}
-              className="text-xl md:text-2xl text-emerald-100 mb-8 leading-relaxed"
-            >
-              <strong>Orchestrate, Automate, and Transform Enterprise Operations</strong><br/>
-              Specializing in intelligent automation that combines AI + low-code platforms — delivering measurable ROI across BFSI, Legal, and Telecom sectors.
-            </motion.p>
-            
-            <motion.div
+            <section ref={heroRef} className="relative min-h-screen flex items-center justify-center bg-emerald-gradient">
+              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="absolute inset-0">
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-400/20 rounded-full blur-3xl"></div>
+              </div>
+              
+              <div className="relative z-10 container-custom text-center">
+                <motion.div
+                  initial="hidden"
+                  animate={heroInView ? "visible" : "hidden"}
+                  variants={staggerContainer}
+                  className="max-w-4xl mx-auto"
+                >
+                  <motion.h1
+                    variants={fadeInUp}
+                    className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+                  >
+                    Strategic Technology Solutions for{' '}
+                    <span className="text-gradient-golden">
+                      Mid-Market Enterprises
+                    </span>
+                  </motion.h1>
+                  
+                  <motion.p
+                    variants={fadeInUp}
+                    className="text-xl md:text-2xl text-emerald-100 mb-8 leading-relaxed"
+                  >
+                    We combine Ivy-League-level strategic thinking with enterprise-grade execution to solve your most complex modernization, automation, and integration challenges.
+                  </motion.p>
+                  
+                              <motion.div
               variants={fadeInUp}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
             >
@@ -146,27 +145,28 @@ const Home = () => {
                 View Success Stories
               </Link>
             </motion.div>
-            
-            <motion.div
-              variants={fadeInUp}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 text-emerald-100"
-            >
-              <div className="flex items-center justify-center">
-                <CheckCircleIcon className="h-6 w-6 mr-3 text-gold-300" />
-                <span>15+ Plug-and-Play AI Solutions</span>
+                  
+                  <motion.div
+                    variants={fadeInUp}
+                    className="mt-12 flex flex-wrap justify-center gap-8 text-emerald-100"
+                  >
+                    <span className='-mb-8'>Specialist in intelligent automation combining AI + low-code platforms — core to digital transformation narratives.</span>
+                    <div className="flex items-center">
+                      <CheckCircleIcon className="h-5 w-5 mr-2 text-gold-300" />
+                      <span>CMMI Level 3 Certified</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircleIcon className="h-5 w-5 mr-2 text-gold-300" />
+                      <span>Enterprise-Grade Security</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircleIcon className="h-5 w-5 mr-2 text-gold-300" />
+                      <span>25+ Years Experience</span>
+                    </div>
+                  </motion.div>
+                </motion.div>
               </div>
-              <div className="flex items-center justify-center">
-                <CheckCircleIcon className="h-6 w-6 mr-3 text-gold-300" />
-                <span>CMMI Level 3 Certified</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <CheckCircleIcon className="h-6 w-6 mr-3 text-gold-300" />
-                <span>Full Lifecycle Delivery</span>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+            </section>
 
       {/* Company Positioning Section */}
       <section ref={positioningRef} className="section-padding bg-white">
