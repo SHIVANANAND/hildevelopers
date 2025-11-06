@@ -95,4 +95,16 @@
   .shadow-gold {
     box-shadow: 0 10px 25px rgba(245, 158, 11, 0.15);
   }
+
+  .sector-preview {
+    @apply h-80 rounded-lg border-4 border-emerald-600 bg-emerald-800 text-white flex items-center justify-center p-6 shadow-emerald;
+  }
+
+  .sector-button {
+    @apply w-full mb-4 p-4 bg-white rounded-lg shadow-emerald flex items-center justify-between hover:translate-x-0.5 transition-all duration-300 hover:shadow-gold;
+  }
+
+  .sector-label {
+    @apply inline-block bg-white border border-emerald-200 px-4 py-2 rounded-sm shadow-sm text-lg font-bold mb-3 text-emerald-900;
+  }
 }
